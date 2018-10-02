@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Formulario terrivel</title>
+    <link rel="stylesheet" href="terrivel.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <h2>Formulario terrivel</h2>
+    <form action="http://terrivel.herokuapp.com/monster" method="GET">
+        <div class="form-row">
+            <div class="form-group">
+                <label>Numero de pedras   
+                    <input class="form-control" value=0 type="number" name="num_pedras" placeholder="nr" min="0">
+                </label>
+            </div>
+            <div class="form-group">
+                    <label>Tamanho das pedras 
+                        <input class="form-control" type="number" name="tam_pedras" step="0.5" min="1" max="7" value="3">
+                    </label>
+            </div>
+        </div>
+        <div class="form-group">
+                <label>Nome do monstro 
+                    <input class="form-control" type="text" name="nome" pattern="[A-Za-z]{0,20}">
+                </label>
+        </div>
+        <div class="form-group">
+            <label>Cor do ceu
+                <br><input type="color" name="corCeu1"> 
+            </label>
+        </div>
+        <div class="form-group">
+            <label>Cor do ceu 2   
+                <br><input type="color" name="corCeu2"> 
+            </label>
+        </div>
+        <div class="form-group">
+            <label for="tipo_pedras" >Sabor das pedras <br>
+                <select name="tipo_pedras" class="form-control">
+                    <option value="marroada">Marroada</option>
+                    <option value="topazio">Topazio</option>
+                    <option value="espinela">Espinela</option>
+                    <option value="ametista" selected>Ametista</option>
+                </select>
+                </label>
+        </div>
+        <div class="form-group">
+                <label>Pedras sortidas</label>
+                <br>
+                <label>
+                    <input name="tipo_pedras_sortidas" type="radio" value="sim" checked>Sim
+                </label>
+                <label>
+                    <input name="tipo_pedras_sortidas" type="radio" value="nao">Não
+                </label>
+        </div>
+        <div class="form-group">
+                <label>Método</label>
+                <br>
+                <label>
+                    <input name="metodo" type="radio" value="GET" checked>GET
+                </label>
+                <label>
+                    <input name="metodo" type="radio" value="POST">POST
+                </label>
+        </div>
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+    <script src="terrivel.js"></script>
+  </body>
+</html>

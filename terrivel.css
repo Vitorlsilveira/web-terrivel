@@ -1,0 +1,15 @@
+form{
+    margin: 0px 10px;
+}
+
+form .form-row{
+    margin-left: 0px;
+}
+
+form .form-group{
+    margin-right: 20px;
+}
+
+body h2{
+    font-weight: bold;
+}
